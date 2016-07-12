@@ -65,11 +65,7 @@ public class BooksAnalyzer {
 		double SumOverDue = HelpUtils.calcResidue(listInputBooks);
 		
 		double reduce = HelpUtils.calcResidue(resultList);
-		
-		
-		
-		System.out.println(SumOverDue);
-		System.out.println("reduce = " + (SumOverDue - reduce));
+		;
 		
 		List<Double> resultOverDueList = new ArrayList<>();
 		
@@ -80,8 +76,6 @@ public class BooksAnalyzer {
 			resultList.size();
 			
 			double resultValue  = SumOverDue - price;
-			
-			System.out.println(resultValue);
 			
 			resultOverDueList.add(resultValue);
 		}
@@ -102,9 +96,8 @@ public class BooksAnalyzer {
 		
 		List<Book> outPutList = getResultBooksList(resultList, listInputBooks,  daysCount, minIndex);
 		
-		System.out.println(outPutList.size());
 		
-		System.out.println(min);
+		HelpUtils.printResult(listInputBooks, outPutList, reader);
 
 		
 
