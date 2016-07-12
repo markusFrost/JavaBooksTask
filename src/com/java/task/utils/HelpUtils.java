@@ -5,19 +5,44 @@ import java.util.List;
 import com.java.task.models.Book;
 
 public class HelpUtils {
-	
-	public static double calcResidue(List<Book> list, int index){
-		
+
+	public static double calcResidue(List<Book> list, int index) {
+
 		double sum = 0;
-		
-		if(index < list.size()){
-			for(int i = index; i < list.size(); i++){
-				
+
+		if (index < list.size()) {
+			for (int i = index; i < list.size(); i++) {
+
 				sum += list.get(i).getOverdueTime();
 			}
 		}
-		
+
 		return sum;
+	}
+	
+	public static double calcResidue(List<Book> list) {
+
+		double sum = 0;
+
+			for (int i = 0; i < list.size(); i++) {
+
+				sum += list.get(i).getOverdueTime();
+			
+		}
+
+		return sum;
+	}
+
+	public static int calcResidueDays(List<Book> list, int daysCount) {
+
+		int sum = 0;
+
+		for (int i = 0; i < list.size(); i++) {
+
+			sum += list.get(i).getReadindTime();
+		}
+
+		return (daysCount - sum);
 	}
 
 }
