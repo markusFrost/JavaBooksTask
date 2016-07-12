@@ -7,12 +7,49 @@ import com.java.task.models.Book;
 import com.java.task.models.Reader;
 
 public class FakeHelper {
+	
+	private Reader reader;
+	private List<Book> listBooks;
+    private int daysCount;
+	
+	public FakeHelper(){
+		
+		generateFakeData();
+	}
+	
+	
 
-	public static List<Book> generateFakeData() {
+	public Reader getReader() {
+		return reader;
+	}
 
+
+
+
+	public List<Book> getListBooks() {
+		return listBooks;
+	}
+	
+	
+
+
+
+
+	public int getDaysCount() {
+		return daysCount;
+	}
+
+
+
+	private void generateFakeData() {
+
+		this.daysCount = 7;
+		
 		Reader reader = new Reader();
 		reader.setName("John Smith");
 		reader.setReadingSpeed(90);
+		
+		this.reader = reader;
 
 		List<Book> listBooks = new ArrayList<Book>();
 		Book b;
@@ -77,7 +114,7 @@ public class FakeHelper {
 
 		listBooks.add(b);
 		
-		return listBooks;
+		this.listBooks = listBooks;
 
 	}
 
