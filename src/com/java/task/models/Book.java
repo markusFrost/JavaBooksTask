@@ -11,6 +11,8 @@ public class Book {
 	private int numberOfPages;
 	
 	private int overdueTime;
+	
+	private double readindTime;
 
 	public String getTitle() {
 		return title;
@@ -51,6 +53,17 @@ public class Book {
 	public void setOverdueTime(int overdueTime) {
 		this.overdueTime = overdueTime;
 	}
+	
+	public void calculateReadingTimeByReaderSpeed(int speed){
+		
+		readindTime =  (double)(numberOfPages / speed); 
+	}
+
+	public double getReadindTime() {
+		return readindTime;
+	}
+	
+	
 	
 	
 }
