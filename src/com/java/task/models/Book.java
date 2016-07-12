@@ -10,7 +10,7 @@ public class Book {
 	
 	private int numberOfPages;
 	
-	private int overdueTime;
+	private double overdueTime;
 	
 	private double readindTime;
 
@@ -46,11 +46,11 @@ public class Book {
 		this.numberOfPages = numberOfPages;
 	}
 
-	public int getOverdueTime() {
+	public double getOverdueTime() {
 		return overdueTime;
 	}
 
-	public void setOverdueTime(int overdueTime) {
+	public void setOverdueTime(double overdueTime) {
 		this.overdueTime = overdueTime;
 	}
 	
@@ -62,6 +62,7 @@ public class Book {
 	public double getReadindTime() {
 		return readindTime;
 	}
+	
 	
 	
 	

@@ -43,7 +43,7 @@ public class FakeHelper {
 
 	private void generateFakeData() {
 
-		this.daysCount = 7;
+		this.daysCount = 13;
 		
 		Reader reader = new Reader();
 		reader.setName("John Smith");
