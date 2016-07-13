@@ -1,12 +1,16 @@
 package com.java.task.utils;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import com.java.task.models.Book;
 import com.java.task.models.Reader;
 
 public class HelpUtils {
+	
 	
 	
 	public static void printResult(List<Book> inputList, List<Book> outPutList, Reader reader){
@@ -98,6 +102,20 @@ public class HelpUtils {
 		}
 
 		return (daysCount - sum);
+	}
+	
+	public static long convertStringToTimeMills(String dateInString){
+		
+		SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
+		
+		try {
+
+			Date date = formatter.parse(dateInString);
+			return date.getTime();
+
+		} catch (Exception e) {
+			return 0;
+		}
 	}
 
 }
