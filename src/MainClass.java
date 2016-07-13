@@ -21,8 +21,6 @@ public class MainClass {
 		
 		List<Rent> listRent = FilesHelper.getInstance().getListRents();
 		
-		System.out.println(listRent.size());
-		
 		 RentAnalyzer.getInstance().analyze(listRent,
 				fakeRentCreator.getDateFrom(), fakeRentCreator.getDaysCount());
 		
