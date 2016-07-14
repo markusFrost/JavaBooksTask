@@ -21,7 +21,7 @@ public class MainClass {
 		
 		//-----------------------
 		
-		List<Integer> inputArray = fakeCreator.getInputArray();
+		int[] inputArray = fakeCreator.getInputArray();
 		
 		System.out.println("\n\nProblem 2");
 		System.out.println("Enter array:");
