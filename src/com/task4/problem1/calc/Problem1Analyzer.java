@@ -49,12 +49,19 @@ public class Problem1Analyzer {
 			int j = 1;
 
 			while (index < length - 1) {
-				while ((index - j >= 0) && (index + j < length) && input.substring(index - j, index - j + 1)
-						.equalsIgnoreCase(input.substring(index + j, index + j + 1))) {
-					
+				
+				String s1 = input.substring(index - j, index - j + 1);
+				String s3 = input.substring(index + j, index + j + 1);
+				
+				do{
 					j++;
-					//System.out.println(j);
+					if((index - j >= 0) && (index + j < length)){
+						
+						s1 = input.substring(index - j, index - j + 1);
+						s3 = input.substring(index + j, index + j + 1);
+					}
 				}
+				while (s1.equalsIgnoreCase(s3));
 				
 				if(j > 1){
 					j--;
