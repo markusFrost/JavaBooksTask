@@ -11,6 +11,8 @@ public class MainClass {
 		
 		String input = HelpUtils.trimString(fakeCreator.getProblem1String());
 		
+		System.out.println("Enter the string" + "\n" + input);
+		
 		Problem1Analyzer.getInstance().analyze(input);
 		
 		
