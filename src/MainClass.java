@@ -1,4 +1,7 @@
+import java.util.List;
+
 import com.task4.problem1.calc.Problem1Analyzer;
+import com.task4.problem2.calc.Problem2Analyzer;
 import com.task4.utils.FakeCreator;
 import com.task4.utils.HelpUtils;
 
@@ -9,11 +12,17 @@ public class MainClass {
 		
 		FakeCreator fakeCreator = new FakeCreator();
 		
-		String input = HelpUtils.trimString(fakeCreator.getProblem1String());
+		/*String input = HelpUtils.trimString(fakeCreator.getProblem1String());
 		
 		System.out.println("Enter the string" + "\n" + input);
 		
-		Problem1Analyzer.getInstance().analyze(input);
+		Problem1Analyzer.getInstance().analyze(input);*/
+		
+		//-----------------------
+		
+		List<Integer> inputArray = fakeCreator.getInputArray();
+		
+		Problem2Analyzer.getInstance().analyze(inputArray);
 		
 		
 	}
