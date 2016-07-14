@@ -10,18 +10,28 @@ public class MainClass {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		System.out.println("Problem 1");
 		FakeCreator fakeCreator = new FakeCreator();
 		
-		/*String input = HelpUtils.trimString(fakeCreator.getProblem1String());
+		String input = HelpUtils.trimString(fakeCreator.getProblem1String());
 		
 		System.out.println("Enter the string" + "\n" + input);
 		
-		Problem1Analyzer.getInstance().analyze(input);*/
+		Problem1Analyzer.getInstance().analyze(input);
 		
 		//-----------------------
 		
 		List<Integer> inputArray = fakeCreator.getInputArray();
 		
+		System.out.println("\n\nProblem 2");
+		System.out.println("Enter array:");
+		
+		for (Integer i : inputArray){
+			System.out.print( i + "\t");
+		}
+		
+		System.out.println("\n________________________________________________________________\nOutput Result:\n");
+				
 		Problem2Analyzer.getInstance().analyze(inputArray);
 		
 		
