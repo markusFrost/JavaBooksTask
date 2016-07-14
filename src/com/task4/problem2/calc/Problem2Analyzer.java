@@ -32,7 +32,7 @@ public class Problem2Analyzer {
 		
 		List<List<Item>> listSequances = new ArrayList<>();
 		
-		for (int i = 0; i < 1; i++){
+		for (int i = 0; i < length; i++){
 			
 			List<Item> helpList = new ArrayList<>();
 			
@@ -71,7 +71,7 @@ public class Problem2Analyzer {
 		
 		
 		
-	/*	Collections.sort(listSequances, new Comparator<List<Item>>() {
+		Collections.sort(listSequances, new Comparator<List<Item>>() {
 
 			@Override
 			public int compare(List<Item> list1,List<Item> list2) {
@@ -81,18 +81,20 @@ public class Problem2Analyzer {
 				
 				return (-1) * l1.compareTo(l2);
 			}
-		});*/
+		});
 		
-		listSequances.size();
+		int maxLength = listSequances.get(0).size();
 		
-		for (List<Item> list : listSequances){
-			
-			for (Item item : list){
-				
-				System.out.print(item.getValue() + "\t");
+		for (List<Item> list : listSequances) {
+
+			if (list.size() == maxLength) {
+				for (Item item : list) {
+
+					System.out.print(item.getValue() + "\t");
+				}
+
+				System.out.println();
 			}
-			
-			System.out.println();
 		}
 	
 	}
